@@ -1,3 +1,5 @@
+import random
+
 file = open('testdemo5.obj')
 output = open('model.txt', 'w')
 
@@ -15,8 +17,9 @@ def getVertexIndex(vertexTup) :
 	verDic[vertexTup] = vertexIndex
 	verInd = vertexTup[0]
 	norInd = vertexTup[1]
-	verStr = '{{XMFLOAT3({:f}f,{:f}f,{:f}f), XMFLOAT3({:f}f,{:f}f, {:f}f),XMFLOAT4(0.0f,0.0f,0.0f,0.0f),XMFLOAT4(1.0f,1.0f,1.0f,1.0f)}},'\
-	.format(vertexList[verInd][0],vertexList[verInd][1],vertexList[verInd][2], normalList[norInd][0], normalList[norInd][1],normalList[norInd][2])
+	color = [random.randint(0, 1), random.randint(0, 1), random.randint(0, 1)]
+	verStr = '{{XMFLOAT3({:f}f,{:f}f,{:f}f), XMFLOAT3({:f}f,{:f}f, {:f}f),XMFLOAT4(0.0f,0.0f,0.0f,0.0f),XMFLOAT4({:.1f}f,{:.1f}f,{:.1f}f,1.0f)}},'\
+	.format(vertexList[verInd][0],vertexList[verInd][1],vertexList[verInd][2], normalList[norInd][0], normalList[norInd][1],normalList[norInd][2], color[0], color[1], color[2])
 	vertexIndex += 1
 	vertexStrArr.append(verStr)
 	return vertexIndex - 1
