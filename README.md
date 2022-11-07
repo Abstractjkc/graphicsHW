@@ -11,3 +11,5 @@ Visual Studio 2019 打开 sln 文件
 **hw4**: 光照
 
 **hw5**: 利用 GeometryShader 生成镜像的字符森林
+
+**hw6**: 材质texture,现在还是一个demo版本

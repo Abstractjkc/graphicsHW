@@ -33,18 +33,6 @@ while True :
 		continue
 	if word[0] == 'v' :
 		vertexList.append([5 * float(x) for x in word[1:]])
-		# if vertexList[-1][0] > 0 :
-		# 	vertexList[-1][0] = 1
-		# else :
-		# 	vertexList[-1][0] = -1
-		# if vertexList[-1][1] > 0 :
-		# 	vertexList[-1][1] = 1
-		# else :
-		# 	vertexList[-1][1] = -1
-		# if vertexList[-1][2] > 1 :
-		# 	vertexList[-1][2] = 1
-		# else :
-		# 	vertexList[-1][2] = -1
 	elif word[0] == 'vn' :
 		normalList.append([float(x) for x  in word[1:]])
 	elif word[0] == 'f' :
