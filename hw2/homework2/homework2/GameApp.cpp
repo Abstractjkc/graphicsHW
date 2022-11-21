@@ -53,7 +53,7 @@ void GameApp::DrawScene()
 	
 	//==========================添加代码-1-开始=======================
 
-	const int N = 10;	// 正方形边长
+	const int N = 42;	// 正方形边长
 	float center = 1.0f * N / 2 + 0.5f;		//计算中心位置
 	auto f = [center](int x, int y) ->float {		//计算与中心的曼哈顿距离
 		return abs(x - center)+abs(y-center);
